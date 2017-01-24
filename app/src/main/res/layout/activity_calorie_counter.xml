@@ -10,8 +10,97 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.user.caloriecounter.CalorieCounter">
 
+    <Button
+        android:text="Calculate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="18dp"
+        android:layout_marginEnd="18dp"
+        android:layout_marginBottom="19dp"
+        android:id="@+id/btnCalculate" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:layout_below="@+id/edtFats"
+        android:layout_alignLeft="@+id/edtFats"
+        android:layout_alignStart="@+id/edtFats"
+        android:layout_marginTop="12dp"
+        android:id="@+id/edtProtein"
+        android:hint="0" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:layout_below="@+id/edtProtein"
+        android:layout_alignLeft="@+id/edtProtein"
+        android:layout_alignStart="@+id/edtProtein"
+        android:layout_marginTop="14dp"
+        android:id="@+id/edtCarbs"
+        android:hint="0" />
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!" />
+        android:layout_above="@+id/btnCalculate"
+        android:layout_alignRight="@+id/btnCalculate"
+        android:layout_alignEnd="@+id/btnCalculate"
+        android:layout_marginBottom="45dp"
+        android:id="@+id/txvTotal"
+        android:layout_alignLeft="@+id/edtCarbs"
+        android:layout_alignStart="@+id/edtCarbs"
+        android:textSize="30sp"
+        android:text="Total" />
+
+    <TextView
+        android:text="Fats (g)"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/edtProtein"
+        android:layout_toLeftOf="@+id/edtFats"
+        android:layout_toStartOf="@+id/edtFats"
+        android:layout_marginRight="17dp"
+        android:layout_marginEnd="17dp"
+        android:layout_marginBottom="10dp"
+        android:id="@+id/textView3" />
+
+    <TextView
+        android:text="Proteins (g)"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView4"
+        android:layout_alignBaseline="@+id/edtProtein"
+        android:layout_alignBottom="@+id/edtProtein"
+        android:layout_alignRight="@+id/textView3"
+        android:layout_alignEnd="@+id/textView3" />
+
+    <TextView
+        android:text="Carbs (g)"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/edtCarbs"
+        android:layout_alignRight="@+id/textView4"
+        android:layout_alignEnd="@+id/textView4"
+        android:layout_marginTop="11dp"
+        android:id="@+id/textView5" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:layout_marginTop="33dp"
+        android:id="@+id/edtFats"
+        android:layout_alignParentTop="true"
+        android:layout_alignRight="@+id/btnCalculate"
+        android:layout_alignEnd="@+id/btnCalculate"
+        android:hint="0" />
+
 </RelativeLayout>
