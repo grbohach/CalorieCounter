@@ -96,7 +96,7 @@
         android:layout_height="wrap_content"
         android:inputType="number"
         android:ems="10"
-        android:layout_marginTop="33dp"
+        android:layout_marginTop="29dp"
         android:id="@+id/edtFats"
         android:layout_alignParentTop="true"
         android:layout_alignRight="@+id/btnCalculate"

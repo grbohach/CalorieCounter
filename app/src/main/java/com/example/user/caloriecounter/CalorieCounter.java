@@ -42,11 +42,26 @@ public class CalorieCounter extends AppCompatActivity implements View.OnClickLis
     public void onClick(View v) {
         Log.d(TAG, "Clicked the button");
         String sFats = fats.getText().toString();
-        int iFats = Integer.parseInt(sFats)*9;
+        int iFats;
+        if(sFats.isEmpty()) {
+            iFats = 0;
+        }
+        else {
+            iFats = Integer.parseInt(sFats) * 9;
+        }
         String sProteins = proteins.getText().toString();
-        int iProteins = Integer.parseInt(sProteins)*4;
+        int iProteins;
+        if(sProteins.isEmpty())
+            iProteins = 0;
+        else
+            iProteins = Integer.parseInt(sProteins)*4;
+
         String sCarbs = carbs.getText().toString();
-        int iCarbs = Integer.parseInt(sCarbs)*4;
+        int iCarbs;
+        if(sCarbs.isEmpty())
+            iCarbs = 0;
+        else
+            iCarbs = Integer.parseInt(sCarbs)*4;
         int calculated = iCarbs+iProteins+iFats;
         total.setText(Integer.toString(calculated));
     }
